@@ -13,7 +13,10 @@ Just copy-n-paste this code to your browser console on the page with events you 
     let len = a.length;
     setInterval(() => {
       if (a.length > len) {
-        a.slice(len, a.length).forEach(i => console.table(i));
+        a.slice(len, a.length).forEach(i => (
+          console.log("\n🚀 " + new Date().toLocalString() + " Event fired"),
+          console.table(i)
+        );
         len = a.length;
       }}, time)})(dataLayer, 500);
 ```
