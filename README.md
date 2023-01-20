@@ -14,9 +14,9 @@ Just copy-n-paste this code to your browser console on the page with events you 
     setInterval(() => {
       if (a.length > len) {
         a.slice(len, a.length).forEach(i => (
-          console.log("\n🚀 " + new Date().toLocalString() + " Event fired"),
+          console.log("\n🚀 " + (new Date()).toLocaleString() + " Event fired"),
           console.table(i)
-        );
+        ));
         len = a.length;
       }}, time)})(dataLayer, 500);
 ```
